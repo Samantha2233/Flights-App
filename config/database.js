@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/flights',
     {
@@ -9,5 +9,5 @@ mongoose.connect('mongodb://localhost/flights',
 
 
 mongoose.connection.on('connected', function() {
-    console.log(`Connected to MongoDB at ${db.host}:${db.port}`);
+    console.log(`Connected to MongoDB at ${mongoose.connection.host}:${mongoose.connection.port}`);
 });
