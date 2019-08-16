@@ -1,19 +1,8 @@
 <%- include('../partials/header') %>
     
-    <h1><%= title %></h1>
+<h1><%= title %></h1>
 
-    <form action="/flights" method="POST"> 
-        <label for="airline">Airline</label>
-        <input type="text" name="airline" id="airline">
-
-        <label for="flightNo">Flight No.</label>
-        <input type="text" name="flightNo" id="flightNo">
-
-        <label for="departs">Departure</label>
-        <input type="text" name="departs" id="departs">
-
-        <button id="save" type="submit">Save Flight</button>
-    </form>
+    <%- include('../partials/form') %>
 
 
 

@@ -15,14 +15,14 @@ const flightSchema = new Schema({
     },
     departs: {
         type: Date,
-        default: function() {
+        default: (function() {
             var date = new Date();
             var year = date.getFullYear();
             var month = date.getMonth();
             var day = date.getDate();
             var defaultDate = new Date(year + 1, month, day);
             return defaultDate.toLocaleString();
-        }
+        })()
     }
 }, {
     timestamps: true
@@ -32,7 +32,7 @@ const flightSchema = new Schema({
 
 const destinationSchema = new Schema ({
     airport: String, 
-    arrival: date,
+    arrival: Date,
 })
 
 const Flight = mongoose.model('Flight', flightSchema);

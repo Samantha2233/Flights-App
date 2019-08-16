@@ -2,7 +2,7 @@
 
 <h1><%= title %></h1>
 
-<p><%= flights.length === 0 ? 'Scheduled Flights:' : 'No Flights Scheduled' %></p>
+<p><%= (flights.length === 0) ? 'Scheduled Flights:' : 'No Flights Scheduled' %></p>
 
 <% flights.forEach(function(flight) { %> 
     <hr>
@@ -12,25 +12,6 @@
 
 <% }); %>
 
-    <form class="add-flight-form" action="/flights" method="POST"> 
-        
-        <div>
-            <h2> Add a New Flight </h2>
-            <div class="input">
-                <label for="airline">Airline</label>
-                <input type="text" name="airline" id="airline">
-            </div>
-            <div class="input">
-                <label for="flightNo">Flight No.</label>
-                <input type="text" name="flightNo" id="flightNo">
-            </div>
-            <div class="input">
-                <label for="departs">Departure</label>
-                <input type="datetime-local" name="departs" id="departs">
-            </div>
-            <button id="save" type="submit">Save Flight</button>
-        </div>
-    </form>
 
-
+<%- include('../partials/form') %>
 <%- include('../partials/footer') %>

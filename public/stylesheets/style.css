@@ -1,10 +1,14 @@
 body {
-  padding: 50px;
+  padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+main {
+  padding: 50px;
 }
 
 /* Can I use a span tag in an .ejs file? */
@@ -16,6 +20,37 @@ a {
 hr {
   border-top: 2px solid blue;
 }
+
+
+
+
+/*  N A V   S T Y L I N G  */
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a {
+  text-decoration: none;
+  border: 1px solid #00B7FF;
+  padding: 5px 7px;
+  border-radius: 2px;
+  margin: 10px;
+  
+}
+
+.active {
+  background-color: #00B7FF;
+  color: white;
+  border: 1px solid blue;
+}
+
+.plus-flight {
+
+}
+
+
+/*  F O R M   S T Y L I N G  */
 
 label {
   color: white;
@@ -57,4 +92,14 @@ form div{
 form button {
   align-self:  flex-end;
   margin: 15px;
+}
+
+
+@media screen and (max-width: 800px) {
+  form {
+    width: 90%;
+  }
+  input {
+    width: 250px;
+  }
 }
