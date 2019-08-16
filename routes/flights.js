@@ -11,4 +11,10 @@ router.get('/', flightsController.index);
 // Create a new flight
 router.post('/', flightsController.create);
 
+//Sort by date
+router.get('/sort', flightsController.sort);
+
+// show details of one flight
+router.get('/:id', flightsController.show);
+
 module.exports = router;

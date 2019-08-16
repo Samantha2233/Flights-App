@@ -1,9 +1,8 @@
 <%- include('../partials/header') %>
-
 <h1><%= title %></h1>
-<a href="/flights/sort">Sort by departure</a>
+<p>In order of departure</p>
 
-
+<a href="/flights">Sort by creation date</a>
 
 
 <p><%= (flights.length === 0) ? 'Scheduled Flights:' : 'No Flights Scheduled' %></p>
@@ -13,7 +12,7 @@
     <p>Airline: <%= flight.airline %></p>
     <p>Flight No.: <%= flight.flightNo %></p>
     <p>Departure: <%= flight.departs %></p>
-    <a href="/flights/<%= flight._id %>">Details</a>
+    <a href="/flights/show">Details</a>
 <% }); %>
 
 
