@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<h1><%= title %></h1>
+
+<p><%= flights.length === 0 ? 'Scheduled Flights:' : 'No Flights Scheduled' %></p>
+
+
+<% flights.forEach(function(flight) { %> 
+    <p>Airline: <%= flight.airline %></p>
+    <p>Flight No.: <%= flight.flightNo %></p>
+    <p>Departure: <%= flight.departs %></p>
+<% }); %>
+
+<%- include('../partials/footer') %>

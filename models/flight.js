@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
+
 const flightSchema = new Schema({
     airline: {
         type: String
@@ -14,9 +15,18 @@ const flightSchema = new Schema({
     },
     departs: {
         type: Date,
-        // default: One year from date created
+        default: function() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth();
+            var day = date.getDate();
+            var defaultDate = new Date(year + 1, month, day);
+            return defaultDate.toLocaleString();
+        }
     }
-})
+}, {
+    timestamps: true
+});
 
 const Flight = mongoose.model('Flight', flightSchema);
 
