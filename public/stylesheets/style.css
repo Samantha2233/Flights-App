@@ -6,3 +6,55 @@ body {
 a {
   color: #00B7FF;
 }
+
+/* Can I use a span tag in an .ejs file? */
+
+/* #plus-flight {
+  border: 1px solid violet;
+} */
+
+hr {
+  border-top: 2px solid blue;
+}
+
+label {
+  color: white;
+  align-self: flex-start;
+  padding-bottom: 7px;
+  font-size: 14px;
+  letter-spacing: .06em;
+}
+  
+
+form {
+  background-color: rgb(1, 1, 136);
+  border-radius: 10px;
+  width: 50em;
+  margin: 0 auto;
+}
+
+form h2 {
+  color: white;
+  padding: 25px 0 0 0;
+}
+
+input {
+  width: 500px;
+  padding: 5px;
+  font-size: 18px;
+  letter-spacing: .06em;
+}
+
+form div{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+
+}
+
+form button {
+  align-self:  flex-end;
+  margin: 15px;
+}

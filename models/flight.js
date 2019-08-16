@@ -28,6 +28,13 @@ const flightSchema = new Schema({
     timestamps: true
 });
 
+// const departure
+
+const destinationSchema = new Schema ({
+    airport: String, 
+    arrival: date,
+})
+
 const Flight = mongoose.model('Flight', flightSchema);
 
 module.exports = Flight; 

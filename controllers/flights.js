@@ -8,7 +8,7 @@ module.exports = {
 
 
 function newFlight(req, res) {
-    res.render('flights/new', { title: 'flights#new' });
+    res.render('flights/new', { title: 'Schedule a Flight' });
 }
 
 
