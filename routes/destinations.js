@@ -7,7 +7,7 @@ var destinationsController = require('../controllers/destinations');
 // create a new destination
 router.post('/flights/:id/destinations', destinationsController.create);
 
-//Sort by date
-// router.get('/', destinationsController.sort);
+//Sort by arrivals date
+router.get('flights/:id/destinations', destinationsController.sort);
 
 module.exports = router;

@@ -4,7 +4,6 @@
 
 <a href="/flights">Sort by creation date</a>
 
-
 <% flights.forEach(function(flight) { %> 
     <hr>
     <p>Airline: <%= flight.airline %></p>
@@ -12,7 +11,6 @@
     <p>Departure: <%= flight.departs %></p>
     <a href="/flights/show">Details</a>
 <% }); %>
-
 
 <%- include('../partials/form') %>
 <%- include('../partials/footer') %>

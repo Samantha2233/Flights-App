@@ -2,7 +2,7 @@ var Flight = require('../models/flight');
 
 module.exports = {
     create,
-    // sort
+    sort
 };
 
 function create(req, res) {
@@ -21,8 +21,9 @@ function create(req, res) {
 }
 
 
-// function sort(req, res) {
-//     Flight.destinations.find({}).sort({ arrival: 'asc' }).exec(function(err, flights) {
-//         res.redirect(`/flights/${flight._id}`);
-//     });
-// }
+function sort(req, res) {
+    // console.log('/////////// sort function ///////');
+    Flight.destinations.find({}).sort({ arrival: 'asc' }).exec(function(err, flights) {
+        res.render('destinations/sort');
+    });
+}
