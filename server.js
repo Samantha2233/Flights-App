@@ -8,6 +8,7 @@ require('./config/database');
 
 var indexRouter = require('./routes/index');
 const flightsRouter = require('./routes/flights');
+const destinationsRouter = require('./routes/destinations');
 
 var app = express();
 
@@ -23,6 +24,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/flights', flightsRouter);
+// mounting to root route for nested resources because 
+// other operations (PUT & DELETE) need flexibility in routes to be used
+// then include full route in routes/destinations.js router
+app.use('/', destinationsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

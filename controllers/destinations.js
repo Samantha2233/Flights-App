@@ -1,10 +1,17 @@
 var Flight = require('../models/flight');
 
 module.exports = {
-    create
+    create,
+    // sort
 };
 
 function create(req, res) {
+    // accessing Flight document to access the 
+    // destinations property, which is an array 
+    // and push in req.body --> destination doc from form
+    // id is pulled from router
+    // save parent document
+    // update --> redirect to show route
     Flight.findById(req.params.id, function(err, flight) {
         flight.destinations.push(req.body);
         flight.save(function(err) {
@@ -12,3 +19,10 @@ function create(req, res) {
         });
     });
 }
+
+
+// function sort(req, res) {
+//     Flight.destinations.find({}).sort({ arrival: 'asc' }).exec(function(err, flights) {
+//         res.redirect(`/flights/${flight._id}`);
+//     });
+// }

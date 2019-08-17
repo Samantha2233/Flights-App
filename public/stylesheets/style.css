@@ -11,16 +11,6 @@ main {
   padding: 50px;
 }
 
-/* Can I use a span tag in an .ejs file? */
-
-/* #plus-flight {
-  border: 1px solid violet;
-} */
-
-hr {
-  border-top: 2px solid blue;
-}
-
 
 
 
@@ -45,12 +35,64 @@ nav a {
   border: 1px solid blue;
 }
 
-.plus-flight {
 
+/*  C O N T E N T   S T Y L I N G  */
+
+.no-info {
+  display: block;
+  background-color: #00B7FF;
+  opacity: .7;
+  text-align: center;
+  width: 50em;
+  padding: 5px 0;
+  color: white;
+  border-radius: 5px;
+  margin: 10px auto;
+  width: 90%;
+}
+
+#scheduled {
+  text-align: left;
 }
 
 
+.flight {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background-color: #00B7FF;
+}
+
+.details {
+  text-decoration: none;
+  border: 1px solid #00B7FF;
+  padding: 5px 7px;
+  border-radius: 2px;
+  margin: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 /*  F O R M   S T Y L I N G  */
+
+
+form {
+  background-color: rgb(1, 1, 136);
+  border-radius: 6px;
+  width: 50em;
+  margin: 15px auto;
+}
+
+form h2 {
+  color: white;
+  padding: 25px 0 0 0;
+}
 
 label {
   color: white;
@@ -58,19 +100,6 @@ label {
   padding-bottom: 7px;
   font-size: 14px;
   letter-spacing: .06em;
-}
-  
-
-form {
-  background-color: rgb(1, 1, 136);
-  border-radius: 10px;
-  width: 50em;
-  margin: 0 auto;
-}
-
-form h2 {
-  color: white;
-  padding: 25px 0 0 0;
 }
 
 input {
@@ -86,7 +115,6 @@ form div{
   padding: 10px 0;
   justify-content: center;
   align-items: center;
-
 }
 
 form button {
@@ -99,7 +127,31 @@ form button {
   form {
     width: 90%;
   }
+
   input {
     width: 250px;
   }
+}
+
+/*  D E S T I N A T I O N S   S T Y L I N G  */
+
+
+
+.destinations {
+  background-color: rgb(160, 226, 252);
+  padding: 10px;
+  border-radius: 7px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.destinations h3 {
+  color: white;
+}
+
+.destinations hr {
+  border: 0;
+  height: 2px;
+  background-color: white;
+
 }

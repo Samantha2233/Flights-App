@@ -1,20 +1,27 @@
 <%- include('../partials/header') %>
 
 <h1><%= title %></h1>
-<a href="/flights/sort">Sort by departure</a>
 
 
+<a href="/flights/sort"><%= flights.length > 1 ? 'Sort by departure' : '' %></a>
 
 
-<p><%= (flights.length === 0) ? 'Scheduled Flights:' : 'No Flights Scheduled' %></p>
-
-<% flights.forEach(function(flight) { %> 
-    <hr>
-    <p>Airline: <%= flight.airline %></p>
-    <p>Flight No.: <%= flight.flightNo %></p>
-    <p>Departure: <%= flight.departs %></p>
-    <a href="/flights/<%= flight._id %>">Details</a>
-<% }); %>
+<% if (flights.length) { %>
+    <% flights.forEach(function(flight) { %> 
+        <div class="flight">
+            <p>Airport: <%= flight.airport %></p>
+            <p>Airline: <%= flight.airline %></p>
+            <p>Flight No.: <%= flight.flightNo %></p>
+            <p>Departure: <%= flight.departs %></p>
+            <a class="details" href="/flights/<%= flight._id %>">Details</a>
+            <hr>
+        </div>
+    <% }); %>
+<% } else { %>
+    <div class="no-info">
+        <p>No flights scheduled yet</p>
+    </div>
+<% } %>
 
 
 <%- include('../partials/form') %>
