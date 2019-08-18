@@ -4,6 +4,15 @@
 
 <!-- <a href="../flights/show">Sort by creation date</a> -->
 
+// sort function
+<% flight.destinations = flight.destinations.sort(function(a,b){ %>
+    <% var c = new Date(a.arrival);%>
+    <% var d = new Date(b.arrival);%>
+    <% return c-d;%>
+<% }); %>
+
+
+
 <hr>
 <p>Airport: <%= flight.airport %></p>
 <p>Airline: <%= flight.airline %></p>

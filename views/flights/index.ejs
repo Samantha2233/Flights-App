@@ -9,10 +9,11 @@
 <% if (flights.length) { %>
     <% flights.forEach(function(flight) { %> 
         <div class="flight">
+            <p>Created: <%= flight.createdAt.toUTCString() %> </p>
             <p>Airport: <%= flight.airport %></p>
             <p>Airline: <%= flight.airline %></p>
             <p>Flight No.: <%= flight.flightNo %></p>
-            <p>Departure: <%= flight.departs %></p>
+            <p>Departure: <%= flight.departs.toLocaleDateString() %></p>
             <a class="details" href="/flights/<%= flight._id %>">Details</a>
             <hr>
         </div>

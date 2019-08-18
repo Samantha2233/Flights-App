@@ -2,20 +2,23 @@
 
 <h1><%= title %></h1>
 
-<a href="../destinations/sort"><%= flight.destinations.length > 1 ? 'Sort by arrival time' : '' %></a>
+<a href="/destinations/sort"><%= flight.destinations.length > 1 ? 'Sort by arrival time' : '' %></a>
 
 <hr>
+
 <p>Airport: <%= flight.airport %></p>
 <p>Airline: <%= flight.airline %></p>
 <p>Flight No.: <%= flight.flightNo %></p>
-<p>Departure: <%= flight.departs %></p>
+<p>Departure: <%= flight.departs.toUTCString() %></p>
+
+
 
 <div class="destinations">
     <h3>Destinations</h3>
     <% flight.destinations.forEach(function(dest) { %> 
         <hr>
         <p>Destination: <%= dest.airport %></p>
-        <p>Arrival: <%= dest.arrival %></p>
+        <p>Arrival: <%= dest.arrival.toUTCString() %></p>
     <% }); %>
 </div>
 

@@ -22,8 +22,6 @@ function create(req, res) {
 
 
 function sort(req, res) {
-    // console.log('/////////// sort function ///////');
-    Flight.destinations.find({}).sort({ arrival: 'asc' }).exec(function(err, flights) {
-        res.render('destinations/sort');
-    });
+    console.log('/////////// sort function ///////');
+        res.redirect(`/flights/${flight._id}`);
 }
