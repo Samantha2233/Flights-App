@@ -169,16 +169,27 @@ form button {
   background-color: rgb(160, 226, 252);
   padding: 10px;
   border-radius: 7px;
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 .destinations h3 {
   color: white;
 }
 
-.destinations hr {
-  border: 0;
-  height: 2px;
-  background-color: white;
 
+.ticket {
+  background:#00B7FF;
+  padding: 10px;
+  border-radius: 7px;
+  margin: 5px 0;
+  position: relative;
+}
+
+.ticket button{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
 }

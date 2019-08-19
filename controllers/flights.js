@@ -8,7 +8,8 @@ module.exports = {
     sort,
     show,
     newTicket,
-    createTicket
+    createTicket,
+    // deleteTicket
 }
 
 
@@ -77,3 +78,7 @@ function createTicket(req, res, next) {
         return next();
     });
 }
+
+// function deleteTicket(req, res){
+//     tickets.splice(id, 1);
+// }

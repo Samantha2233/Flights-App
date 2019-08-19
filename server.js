@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var methodOverride = require('method-override');
 require('./config/database');
 
 var indexRouter = require('./routes/index');
@@ -23,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(methodOverride('_method'));
 
 //these routers can go in any order, they wont conflict
 app.use('/', indexRouter);

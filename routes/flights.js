@@ -22,6 +22,8 @@ router.get('/:id', flightsController.show);
 
 router.get('/:id/tickets/new', flightsController.newTicket);
 router.post('/:id/tickets', flightsController.createTicket, flightsController.show)
+// router.delete('/:id', flightsController.delete);
+
 
 module.exports = router;
 
