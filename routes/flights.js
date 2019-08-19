@@ -17,4 +17,13 @@ router.get('/sort', flightsController.sort);
 // show details of one flight
 router.get('/:id', flightsController.show);
 
+
+
+
+router.get('/:id/tickets/new', flightsController.newTicket);
+router.post('/:id/tickets', flightsController.createTicket, flightsController.show)
+
 module.exports = router;
+
+
+

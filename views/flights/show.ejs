@@ -23,8 +23,23 @@
 </div>
 
 
-<form class="add-destination-form" action="/flights/<%= flight._id %>/destinations" method="POST"> 
-        
+<div>
+    <h3>Tickets</h3>
+    <% if(tickets.length) { %>
+        <% tickets.forEach(function(ticket) { %>
+            <p>Seat: <%= ticket.seat %></p>
+            <p>Price: <%= ticket.price %></p>
+        <% }); %>
+    <% } else { %>
+        <p class="no-info">No tickets yet</p>
+    <% } %>
+    <a href='/flights/<%= flight._id %>/tickets/new'>Add a New Ticket</a>
+</div>
+
+
+
+
+<form action="/flights/<%= flight._id %>/destinations" method="POST"> 
     <div>
         <h2> Add a Destination </h2>
         <div class="input">

@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<h1><%= title %></h1>
+
+<h3>Flight <%= flight.flightNo %></h3>
+
+<form action = "/flights/<%= flight._id %>/tickets" method = "POST">
+    <div>
+        <h2>Add a Ticket</h2>
+        <div class="input">
+            <label for="seat">Seat</label>
+            <input type="text" name="seat" id="seat" required pattern="[A-F][1-9]\d">
+        </div>
+        <div class="input">
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price">
+        </div>
+        
+        <button type="submit">Add Ticket</button>
+    </div>
+</form>
+
+<%- include('../partials/footer') %>
